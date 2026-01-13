@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768304257" />
+    <testcase name="ring_counter_test" classname="ring_counter_test" file="/home/veddesh/example/Cocotb-digital-designs/ring_counter/ring_counter_test.py" lineno="29" time="0.002462625503540039" sim_time_ns="230.001" ratio_time="93396.66127446994" />
+  </testsuite>
+</testsuites>
