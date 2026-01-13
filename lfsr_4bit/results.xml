@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1748934355" />
-    <testcase name="test_lfsr_4bit" classname="test_lfsr_4bit" file="/home/veddesh/Cocotb-digital-designs/lfsr_4bit/test_lfsr_4bit.py" lineno="5" time="0.0038199424743652344" sim_time_ns="1010.001" ratio_time="264402.1491888653" />
-  </testsuite>
-</testsuites>

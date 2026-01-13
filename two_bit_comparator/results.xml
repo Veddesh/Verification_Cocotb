@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1748848203" />
-    <testcase name="two_bit_comp" classname="test_two_bit_comparator" file="/home/veddesh/Cocotb-digital-designs/two_bit_comparator/test_two_bit_comparator.py" lineno="4" time="0.0017802715301513672" sim_time_ns="16.001" ratio_time="8987.954774876122" />
-  </testsuite>
-</testsuites>

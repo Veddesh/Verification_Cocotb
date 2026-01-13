@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1749038590" />
-    <testcase name="test_up_counter_4bit_jkff" classname="test_up_counter_4bit_jkff" file="/home/veddesh/Cocotb-digital-designs/up_counter_4bit_jkff/test_up_counter_4bit_jkff.py" lineno="5" time="0.007317304611206055" sim_time_ns="201.001" ratio_time="27469.26780828256" />
-  </testsuite>
-</testsuites>

@@ -1,20 +1,26 @@
 module counter #(
     parameter          WIDTH=4
 ) (
-    input              clk_i,
-    input              rst_i,
-    output [WIDTH-1:0] cnt_o
+    input              clk,
+    input              rst,
+    output [WIDTH-1:0] count
 );
 
     reg [WIDTH-1:0] cnt;
 
-    always @(posedge clk_i) begin
-        if (rst_i == 1'b1)
-            cnt <= {WIDTH{1'b0}};
+    always @(posedge clk) begin
+        if (rst == 1'b1)
+            cnt<= {WIDTH{1'b0}};
         else
             cnt <= cnt + 1'b1;
     end
 
-    assign cnt_o = cnt;
+    assign count = cnt;
 
-endmodule
+
+initial begin
+$dumpfile("dump.vcd");
+$dumpvars(0,counter);
+end
+
+ endmodule

@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1748931663" />
-    <testcase name="test_sipo_shift_register" classname="test_sipo_shift_register" file="/home/veddesh/Cocotb-digital-designs/sipo_shift_register/test_sipo_shift_register.py" lineno="6" time="0.0018966197967529297" sim_time_ns="150.001" ratio_time="79088.59764978001" />
-  </testsuite>
-</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768240572" />
+    <testcase name="priority_encoder_test" classname="priority_encoder_test" file="/home/veddesh/example/Cocotb-digital-designs/priority_encoder/priority_encoder_test.py" lineno="30" time="0.014825105667114258" sim_time_ns="256.001" ratio_time="17268.07253508306" />
+  </testsuite>
+</testsuites>

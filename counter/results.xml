@@ -1,7 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1767688744" />
-    <testcase name="reset_test" classname="counter_test" file="/home/veddesh/example/Cocotb-digital-designs/counter/counter_test.py" lineno="7" time="0.0008053779602050781" sim_time_ns="30.001" ratio_time="37250.83312729426" />
-    <testcase name="counter_test" classname="counter_test" file="/home/veddesh/example/Cocotb-digital-designs/counter/counter_test.py" lineno="18" time="0.0009109973907470703" sim_time_ns="200.001" ratio_time="219540.69466213035" />
+    <property name="random_seed" value="1768297984" />
+    <testcase name="counter_test" classname="counter_test" file="/home/veddesh/example/Cocotb-digital-designs/counter/counter_test.py" lineno="37" time="0.005776882171630859" sim_time_ns="230.001" ratio_time="39814.03690895584" />
   </testsuite>
 </testsuites>
