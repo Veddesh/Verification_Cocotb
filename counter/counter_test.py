@@ -48,13 +48,8 @@ async def counter_test(dut):
         x=dut.count.value
 
         await RisingEdge(dut.clk)
+
+        output=dut.count.value
         
-        if x==15 and counter_model(x)==0:
-            logging.info("Overflow has correctly occured after 15 to 0")
-        elif counter_model(x)==dut.count.value:
-                logging.info("Counter has correctly given output value %d after %d",dut.count.value,x)
-        else:
-            logging.info("Error in counting after count value %d, the count value got is %d",x,dut.count.value)
-
-
+        assert counter_model(x)==output, "Errror in counting"
 

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768370670" />
+    <testcase name="jkff_test" classname="jkff_test" file="/home/veddesh/example/Cocotb-digital-designs/jkff/jkff_test.py" lineno="28" time="0.0020232200622558594" sim_time_ns="231.001" ratio_time="114174.92556021683" />
+  </testsuite>
+</testsuites>

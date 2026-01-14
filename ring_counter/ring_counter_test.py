@@ -44,7 +44,4 @@ async def ring_counter_test(dut):
 
         output=dut.count.value
 
-        if ring_counter_model(prev_output)==output:
-            logging.info("The test case has passed correctly by giving count %d after %d",output,prev_output)
-        else:
-            logging.info("The test case has failed by giving output %d instead of output %d after the count %d",output,ring_counter_model(prev_output),prev_output)
+        assert ring_counter_model(prev_output)==output,f"The test case has failed by giving output {output} instead of output {ring_counter_model(prev_output)} after the count {prev_output}"

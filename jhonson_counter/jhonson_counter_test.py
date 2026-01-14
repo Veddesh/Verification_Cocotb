@@ -50,9 +50,4 @@ async def jhonson_counter_test(dut):
 
 
 
-        if jhonson_counter_model(prev_output)==output:
-            logging.info("The jhonson counter correctly give count %d after count %x",output,prev_output)
-
-        else:
-            logging.info("The jhonson counter incorrectly performs. Has given count %d after count %d when the expected count was %d",output,prev_output,jhonson_counter_model(prev_output))
-            
+        assert jhonson_counter_model(prev_output)==output, f"The jhonson counter has failed by giving output {output} after count {prev_output} when expected count was {jhonson_counter_model(prev_output)}"

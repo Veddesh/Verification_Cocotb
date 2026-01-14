@@ -5,23 +5,9 @@ from cocotb.binary import BinaryValue
 
 from cocotb.triggers import Timer
 
-def mux_model( din_binaryvalue, sel_binaryvalue):
-    if  sel_binaryvalue.binstr=="000":
-        expected_val=din_binaryvalue.binstr[7]
-    elif  sel_binaryvalue.binstr=="001":
-        expected_val=din_binaryvalue.binstr[6]
-    elif  sel_binaryvalue.binstr=="010":
-        expected_val=din_binaryvalue.binstr[5]
-    elif  sel_binaryvalue.binstr=="011":
-        expected_val=din_binaryvalue.binstr[4]
-    elif  sel_binaryvalue.binstr=="100":
-        expected_val=din_binaryvalue.binstr[3]
-    elif  sel_binaryvalue.binstr=="101":
-        expected_val=din_binaryvalue.binstr[2]
-    elif  sel_binaryvalue.binstr=="110":
-        expected_val=din_binaryvalue.binstr[1]
-    elif  sel_binaryvalue.binstr=="111":
-        expected_val=din_binaryvalue.binstr[0]
+def mux_model(a,b):
+    expected_val=(a>>b)&1
+    
 
     return expected_val
 
@@ -35,23 +21,11 @@ async def mux_test(dut):
             dut.din.value = a
             dut.sel.value = b
 
-            din_binaryvalue = BinaryValue(n_bits=8,bigEndian=False,value=0)
-            sel_binaryvalue = BinaryValue(n_bits=3,bigEndian=False,value=0)
-            output_binaryvalue=BinaryValue(n_bits=1,bigEndian=False,value=0)
+            await Timer(1,"ns")
 
-            din_binaryvalue.integer=a
-            sel_binaryvalue.integer=b
-
-            await Timer(1, units="ns")
-
-    
             output=dut.dout.value
-            output_binaryvalue.integer=output
+            assert mux_model(a,b)==output, "Error in calculation"
 
-            if mux_model(din_binaryvalue, sel_binaryvalue)==output_binaryvalue.binstr:
-                pass
-            else:
-                logging.warning("Test has failed at the input %d %d, expected output %d, got goutput %s",a,b,output,mux_model(din_binaryvalue,sel_binaryvalue))
 
 
 
